@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+
+
 class Results extends Component{
 
     render (){
@@ -14,12 +16,23 @@ class Results extends Component{
                 type = '?rel_ant='
             }
             var query = baseUrl + type + wordToSearch;
+
+            fetch(query).then(response => {
+                if (response.ok){
+                    return response.json();
+                }
+                throw new Error('Request failed');
+            }, networkError => console.log(networkError.message)
+            ).then(jsonResponse => {
+                console.log(jsonResponse)
+            })
          }
+
         return (
             <div className='row'>
                 <div className='col-6 mx-auto'>
                     <ol>
-                        <li>{query}</li>
+                        
                     </ol>
                 </div>
             </div>
