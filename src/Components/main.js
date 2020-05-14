@@ -9,7 +9,7 @@ class Main extends Component {
         this.state = {
             word: '',
             typeSearch: '',
-            readyToFind:false
+            readyToFind:false,
         }
         this.handleFormInput = this.handleFormInput.bind(this);
     }
@@ -22,8 +22,6 @@ class Main extends Component {
         })
     }
 
-    
-
     render() {
 
         return (
@@ -31,6 +29,7 @@ class Main extends Component {
                 <Title />
                 <UserInputForm 
                     handleFormInput={this.handleFormInput} 
+                    handleNextWord={this.handleNextWord}
                  />
                 <Results 
                     readyToFind={this.state.readyToFind}

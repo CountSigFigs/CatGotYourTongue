@@ -17,7 +17,7 @@ class UserInputForm extends Component {
     }
 
     handleWordChange(event){
-        this.setState({word: event.target.value})
+        this.setState({word: event.target.value});
     }
 
     handleSyn(){
