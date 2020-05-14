@@ -25,11 +25,10 @@ class UserInputForm extends Component {
     }
 
     handleAyn(){
-        this.setState({typeSearch: 'ayn'})
+        this.setState({typeSearch: 'ant'})
     }
 
     handleSubmit(e){
-        console.log(this.state)
         e.preventDefault()
         this.props.handleFormInput(this.state.word,this.state.typeSearch)
     }
