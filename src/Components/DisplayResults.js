@@ -6,6 +6,8 @@ class Results extends Component{
     constructor(props){
         super(props)
         this.state={
+            error: null,
+            isLoaded: false,
             wordList:[]
         }
 
@@ -20,9 +22,11 @@ class Results extends Component{
     render (){
 
         if (this.props.readyToFind){
+
             let baseUrl = 'https://api.datamuse.com/words';
             let wordToSearch = this.props.word;
             let type;
+
             if (this.props.typeSearch === 'syn') {
                 type = '?rel_syn='
             }
@@ -35,34 +39,47 @@ class Results extends Component{
                 if (response.ok){
                     return response.json();
                 }
-                throw new Error('Request failed');
-            }, networkError => console.log(networkError.message)
-            ).then(jsonResponse => {
+            })
+            .then(jsonResponse => {
                 let trimmedList= jsonResponse.slice(0,10);
                 if (!trimmedList.length){
-                    let error= 'Uh Oh, word finder couldnt find anything. Try again!'
-                    this.handleWordList(error)
+                    this.setState({
+                        error,
+                        isLoaded:true
+                    })
                 } else {
-                this.handleWordList(trimmedList)
+                    this.setState({
+                        isLoaded:true,
+                        wordList: trimmedList
+                    })
                 }
             }).catch(error => console.log(error))
-         }
-        
-        const dataList = this.state.wordList.map(item => (
-           <li key={item.word}>
-             {item.word}
-           </li>
-         ))
 
-        return (
-            <div className='row'>
-                <div className='col-6 mx-auto'>
+            const {error, isLoaded, wordList } = this.state;
+
+            if (error){
+                return <div>Error: {error.message}</div>
+            } else if (!isLoaded){
+                return (<div>Loading ...</div>)
+            } else {
+                return (
+                    <div> 
                     <ol>
-                    {dataList}
+                        {wordList.map(item => (
+                            <li key={item.word}>
+                                {item.word}
+                            </li>
+                        ))}
                     </ol>
                 </div>
-            </div>
-        )
+                )
+            }
+         }
+        else {
+            return(
+                <div></div>
+            )
+        }
     }
 }
 
