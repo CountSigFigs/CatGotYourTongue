@@ -10,9 +10,6 @@ class Main extends Component {
             word: '',
             typeSearch: '',
             readyToFind: false,
-            error: null,
-            isLoaded: false,
-            wordList: []
         }
         this.handleFormInput = this.handleFormInput.bind(this);
     }
@@ -25,39 +22,6 @@ class Main extends Component {
         })
     }
 
-    componentDidMount() {
-        if (this.state.readyToFind){
-        let baseUrl = 'https://api.datamuse.com/words';
-        let wordToSearch = this.state.word;
-        let type;
-        console.log(this.state)
-        if (this.state.typeSearch === 'syn') {
-            type = '?rel_syn='
-        }
-        if (this.state.typeSearch === 'ant') {
-            type = '?rel_ant='
-        }
-        let query = baseUrl + type + wordToSearch;
-        fetch(query)
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    //top ten results
-                    let trimmedList = result.slice(0,10)
-                    this.setState({
-                        isLoaded: true,
-                        wordList: trimmedList,
-                    });
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
-                }
-            )
-        }
-    }
     render() {
 
         return (
@@ -67,10 +31,9 @@ class Main extends Component {
                     handleFormInput={this.handleFormInput}
                 />
                 <Results
+                    word={this.state.word}
                     readyToFind={this.state.readyToFind}
-                    error={this.state.error}
-                    isLoaded={this.state.isLoaded}
-                    wordList={this.state.wordList}
+                    typeSearch={this.state.typeSearch}
                 />
             </div>
         )

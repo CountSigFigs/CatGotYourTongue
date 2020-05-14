@@ -37,7 +37,7 @@ class UserInputForm extends Component {
         return(
             <div className='row'>
                 <div className='col-6 mx-auto'>
-                    <Form onSubmit={this.handleSubmit}>
+                    <Form>
                         <FormGroup>
                             <Label for='userWord'>
                                 Enter Your Word
@@ -57,7 +57,7 @@ class UserInputForm extends Component {
                                 <Button type="button" className="btn" onClick={this.handleAyn}>Antonyms</Button>
                             </div>
                         </FormGroup>
-                        <Button type='submit' value='submit'>Search</Button>
+                        <Button type='submit' value='submit' onClick={this.handleSubmit}>Search</Button>
                     </Form>
                 </div>
             </div>
