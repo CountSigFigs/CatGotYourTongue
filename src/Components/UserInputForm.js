@@ -36,10 +36,10 @@ class UserInputForm extends Component {
     render (){
         return(
             <div className='row'>
-                <div className='col-6 mx-auto'>
+                <div className='col-9 col-md-7 mx-auto text-center'>
                     <Form>
                         <FormGroup>
-                            <Label for='userWord'>
+                            <Label for='userWord' style={styles.formLabel}>
                                 Enter Your Word
                             </Label>
                             <Input 
@@ -53,8 +53,8 @@ class UserInputForm extends Component {
                         </FormGroup>
                         <FormGroup>
                             <div className="btn-group" role="group" aria-label="Basic example">
-                                <Button type="button" className="btn" onClick={this.handleSyn}>Synonyms</Button>
-                                <Button type="button" className="btn" onClick={this.handleAyn}>Antonyms</Button>
+                                <Button style={styles.formButton} type="button" className="btn" onClick={this.handleSyn} id='toggleButton'>Synonyms</Button>
+                                <Button style={styles.formButton} type="button" className="btn" onClick={this.handleAyn} id='toggleButton'>Antonyms</Button>
                             </div>
                         </FormGroup>
                         <Button type='submit' value='submit' onClick={this.handleSubmit}>Search</Button>
@@ -64,6 +64,15 @@ class UserInputForm extends Component {
         )
     }
 }
-
+const styles={
+    formLabel:{
+        float:'left',
+        fontFamily:'Pangolin'
+    },
+    formButton:{
+        backgroundColor:'#FBCE3A',
+        borderColor:'black'
+    }
+}
 export default UserInputForm;
 

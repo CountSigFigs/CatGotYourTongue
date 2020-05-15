@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-
-
 class Results extends Component {
     constructor(props){
         super(props)
@@ -55,13 +53,15 @@ class Results extends Component {
                 return <div>Loading...</div>;
             } else {
                 return (
-                    <ol>
-                        {wordList.map(item => (
-                            <li key={item.word}>
-                                {item.word}
-                            </li>
-                        ))}
-                    </ol>
+                    <div className='col-9 col-md-6 mx-auto text-center mt-3'>
+                        <ol>
+                            {wordList.map(item => (
+                                <li key={item.word}>
+                                    {item.word}
+                                </li>
+                            ))}
+                        </ol>
+                    </div>
                 )
             }
         }

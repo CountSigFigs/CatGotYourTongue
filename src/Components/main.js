@@ -25,7 +25,7 @@ class Main extends Component {
     render() {
 
         return (
-            <div className='container'>
+            <div className='container' style={containerStyle}>
                 <Title />
                 <UserInputForm
                     handleFormInput={this.handleFormInput}
@@ -39,6 +39,14 @@ class Main extends Component {
         )
     }
 }
-
+const containerStyle={
+    backgroundColor:'#C9595F',
+    borderRadius:5,
+    marginTop:35, 
+    height: 565,
+    width:450,
+    opacity: 0.95,
+    color: '#010100' 
+   }
 export default Main;
 

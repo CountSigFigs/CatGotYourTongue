@@ -1,15 +1,27 @@
 import React from 'react';
 
+
+
 function Title () {
     return (
             <div className='row'>
-                <div className='col mt-5'>
-                    <span>Cat Got Your Tongue?</span>
+                <div className='col mx-auto mt-3 text-center'>
+                    <span style={styles.title}>Cat Got Your Tongue?</span>
                     <br />
-                    <small>Let me help you find synonyms and antonyms</small>
+                    <p style={styles.tag}><i>Let me help you find synonyms and antonyms</i></p>
                 </div>
             </div>
     )
 }
 
+const styles={
+    title:{
+        fontSize:42,
+        fontWight:'bold',
+        fontFamily:'Pangolin'
+    },
+    tag:{
+        fontFamily:'Pangolin'
+    }
+}
 export default Title;
