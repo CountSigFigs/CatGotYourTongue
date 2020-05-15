@@ -10,10 +10,15 @@ class Results extends Component {
         }
     }
     componentDidUpdate(prevProps) {
-        if (this.props.word !== prevProps.word && this.props.typeSearch !== prevProps.typeSearch){
+
+        //prevents infinite loop
+        if (this.props.word !== prevProps.word || this.props.typeSearch !== prevProps.typeSearch){
+        console.log(this.props.word, this.props.typeSearch)
         let baseUrl = 'https://api.datamuse.com/words';
         let wordToSearch = this.props.word;
         let type;
+
+        //determines what type of search to perform
         if (this.props.typeSearch === 'syn') {
             type = '?rel_syn='
         }
