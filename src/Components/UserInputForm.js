@@ -53,11 +53,11 @@ class UserInputForm extends Component {
                         </FormGroup>
                         <FormGroup>
                             <div className="btn-group" role="group" aria-label="Basic example">
-                                <Button style={styles.formButton} type="button" className="btn" onClick={this.handleSyn} id='toggleButton'>Synonyms</Button>
-                                <Button style={styles.formButton} type="button" className="btn" onClick={this.handleAyn} id='toggleButton'>Antonyms</Button>
+                                <Button style={styles.formButton} type="button" className="btn"  onClick={this.handleSyn} id='toggleButton'>Synonyms</Button>
+                                <Button style={styles.formButton} type="button" className="btn"  onClick={this.handleAyn} id='toggleButton'>Antonyms</Button>
                             </div>
                         </FormGroup>
-                        <Button type='submit' value='submit' onClick={this.handleSubmit}>Search</Button>
+                        <Button style={styles.submitButton} type='submit' value='submit' onClick={this.handleSubmit} id='submitButton'>Search</Button>
                     </Form>
                 </div>
             </div>
@@ -72,6 +72,10 @@ const styles={
     formButton:{
         backgroundColor:'#FBCE3A',
         borderColor:'black'
+    },
+    submitButton:{
+        backgroundColor:'#fbce3a',
+        border:'none'
     }
 }
 export default UserInputForm;

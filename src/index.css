@@ -3,10 +3,13 @@ body {
   margin: 0;
 }
 
-.btn-secondary:hover{
-  background-color: cadetblue !important;
+
+
+#toggleButton:focus{
+    background: rgb(221, 170, 4)  !important;
 }
 
-.btn-seconday:focus{
-  background-color: cadetblue !important;
+#submitButton:hover{
+  background-color: rgba(240, 185, 4, 0.945) !important;
 }
+
