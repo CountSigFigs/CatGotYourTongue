@@ -10,7 +10,7 @@ class Results extends Component {
         }
     }
     componentDidUpdate(prevProps) {
-        if (this.props.word !== prevProps.word){
+        if (this.props.word !== prevProps.word && this.props.typeSearch !== prevProps.typeSearch){
         let baseUrl = 'https://api.datamuse.com/words';
         let wordToSearch = this.props.word;
         let type;
@@ -47,13 +47,15 @@ class Results extends Component {
     render() {
         if (this.props.readyToFind) {
             const { error, isLoaded, wordList } = this.state;
-            if (error) {
-                return <div>Error: {error.message}</div>
+            if (!this.props.word || !this.props.typeSearch){
+                return <div className='text-center' style={styles.list}><p>Uh oh something went wrong. Make sure you enter a word</p></div>
+            } else if (error) {
+                return <div className='text-center' style={styles.list}>Error: {error.message}</div>
             } else if (!isLoaded) {
-                return <div>Loading...</div>;
+                return <div className='text-center' style={styles.list}>Loading...</div>;
             } else {
                 return (
-                    <div className='col-9 col-md-6 mx-auto text-center mt-3'>
+                    <div className='col-9 col-md-6 mx-auto text-center mt-3' style={styles.list}>
                         <ol>
                             {wordList.map(item => (
                                 <li key={item.word}>
@@ -70,4 +72,12 @@ class Results extends Component {
         }
     }
 }
+
+const styles={
+    list:{
+        fontSize:14,
+        fontFamily:'Pangolin'
+        }
+};
+
 export default Results;
