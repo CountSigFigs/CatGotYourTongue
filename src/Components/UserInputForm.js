@@ -31,6 +31,9 @@ class UserInputForm extends Component {
     handleSubmit(e){
         e.preventDefault()
         this.props.handleFormInput(this.state.word,this.state.typeSearch)
+        this.setState({
+            typeSearch: ''
+        })
     }
 
     render (){
@@ -78,5 +81,6 @@ const styles={
         border:'none'
     }
 }
+
 export default UserInputForm;
 

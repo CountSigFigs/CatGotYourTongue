@@ -35,6 +35,7 @@ class Results extends Component {
                     this.setState({
                         isLoaded: true,
                         wordList: trimmedList,
+                        error:null
                     });
                 },
                 (error) => {
@@ -60,8 +61,10 @@ class Results extends Component {
             } else if (this.state.wordList.length < 1){
                 return <div className='text-center'>No words were found. Try again.</div>
             } else {
+                let wordSearch = this.props.typeSearch === 'syn' ? 'Synomons' : 'Antoynms'
                 return (
                     <div className='col-9 col-md-6 mx-auto text-center mt-3' style={styles.list}>
+                        <p> {wordSearch} for your word: {this.props.word}</p>
                         <ol>
                             {wordList.map(item => (
                                 <li key={item.word}>
