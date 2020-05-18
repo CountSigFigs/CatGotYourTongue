@@ -73,11 +73,11 @@ const styles={
         fontFamily:'Pangolin'
     },
     formButton:{
-        backgroundColor:'#FBCE3A',
+        backgroundColor:'#55AA56',
         borderColor:'black'
     },
     submitButton:{
-        backgroundColor:'#fbce3a',
+        backgroundColor:'#55AA56',
         border:'none'
     }
 }

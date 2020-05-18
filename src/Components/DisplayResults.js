@@ -64,7 +64,7 @@ class Results extends Component {
                 let wordSearch = this.props.typeSearch === 'syn' ? 'Synomons' : 'Antoynms'
                 return (
                     <div className='col-9 col-md-6 mx-auto text-center mt-3' style={styles.list}>
-                        <p> {wordSearch} for your word: {this.props.word}</p>
+                        <p> {wordSearch} for: {this.props.word}</p>
                         <ol>
                             {wordList.map(item => (
                                 <li key={item.word}>
@@ -84,7 +84,7 @@ class Results extends Component {
 
 const styles={
     list:{
-        fontSize:14,
+        fontSize:15,
         fontFamily:'Pangolin'
         }
 };

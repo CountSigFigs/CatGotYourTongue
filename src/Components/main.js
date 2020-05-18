@@ -40,12 +40,12 @@ class Main extends Component {
     }
 }
 const containerStyle={
-    backgroundColor:'#C9595F',
+    backgroundColor:'whitesmoke',
+    marginTop:35,
     borderRadius:5,
-    marginTop:35, 
-    height: 565,
+    height: 595,
     width:450,
-    opacity: 0.95,
+    opacity: 0.9,
     color: '#010100' 
    }
 export default Main;

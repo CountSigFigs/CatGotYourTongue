@@ -1,9 +1,12 @@
 body {
-  background-color: #FBCE3A !important;
+  background-image: url('./Images/background3.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   margin: 0;
+  height: 100vh;
+  width: 100%;
 }
-
-
 
 #toggleButton:focus{
     background: rgb(221, 170, 4)  !important;
