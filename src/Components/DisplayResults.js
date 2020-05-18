@@ -25,7 +25,7 @@ class Results extends Component {
             type = '?rel_ant='
         }
         let query = baseUrl + type + wordToSearch;
-        fetch(query)
+        fetch(query,{cache: 'no-cache'})
             .then(res => res.json())
             .then(
                 (result) => {
