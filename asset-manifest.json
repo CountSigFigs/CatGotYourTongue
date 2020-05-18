@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/catgotyourtongue/static/css/main.11ce1c75.chunk.css",
-    "main.js": "/catgotyourtongue/static/js/main.baa7b5ae.chunk.js",
-    "main.js.map": "/catgotyourtongue/static/js/main.baa7b5ae.chunk.js.map",
-    "runtime-main.js": "/catgotyourtongue/static/js/runtime-main.ea25ddbf.js",
-    "runtime-main.js.map": "/catgotyourtongue/static/js/runtime-main.ea25ddbf.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/catgotyourtongue/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.6ccef24c.chunk.js": "/catgotyourtongue/static/js/2.6ccef24c.chunk.js",
-    "static/js/2.6ccef24c.chunk.js.map": "/catgotyourtongue/static/js/2.6ccef24c.chunk.js.map",
-    "index.html": "/catgotyourtongue/index.html",
-    "precache-manifest.aed7fbc371c801cc69849acc8f00f714.js": "/catgotyourtongue/precache-manifest.aed7fbc371c801cc69849acc8f00f714.js",
-    "service-worker.js": "/catgotyourtongue/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/catgotyourtongue/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.11ce1c75.chunk.css.map": "/catgotyourtongue/static/css/main.11ce1c75.chunk.css.map",
-    "static/js/2.6ccef24c.chunk.js.LICENSE.txt": "/catgotyourtongue/static/js/2.6ccef24c.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/catgotyourtongue/static/media/background3.16cf1869.svg"
+    "main.css": "/CatGotYourTongue/static/css/main.6be29fe4.chunk.css",
+    "main.js": "/CatGotYourTongue/static/js/main.066e417c.chunk.js",
+    "main.js.map": "/CatGotYourTongue/static/js/main.066e417c.chunk.js.map",
+    "runtime-main.js": "/CatGotYourTongue/static/js/runtime-main.00daa43b.js",
+    "runtime-main.js.map": "/CatGotYourTongue/static/js/runtime-main.00daa43b.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/CatGotYourTongue/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.6ccef24c.chunk.js": "/CatGotYourTongue/static/js/2.6ccef24c.chunk.js",
+    "static/js/2.6ccef24c.chunk.js.map": "/CatGotYourTongue/static/js/2.6ccef24c.chunk.js.map",
+    "index.html": "/CatGotYourTongue/index.html",
+    "precache-manifest.2bd579c0c2b9a36597a72b0eb46c5002.js": "/CatGotYourTongue/precache-manifest.2bd579c0c2b9a36597a72b0eb46c5002.js",
+    "service-worker.js": "/CatGotYourTongue/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/CatGotYourTongue/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.6be29fe4.chunk.css.map": "/CatGotYourTongue/static/css/main.6be29fe4.chunk.css.map",
+    "static/js/2.6ccef24c.chunk.js.LICENSE.txt": "/CatGotYourTongue/static/js/2.6ccef24c.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/CatGotYourTongue/static/media/background3.16cf1869.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea25ddbf.js",
+    "static/js/runtime-main.00daa43b.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.6ccef24c.chunk.js",
-    "static/css/main.11ce1c75.chunk.css",
-    "static/js/main.baa7b5ae.chunk.js"
+    "static/css/main.6be29fe4.chunk.css",
+    "static/js/main.066e417c.chunk.js"
   ]
 }
