@@ -18,7 +18,8 @@ const styles={
     title:{
         fontSize:42,
         fontWight:'bold',
-        fontFamily:'Pangolin'
+        fontFamily:'Pangolin',
+        color:'#77AA77'
     },
     tag:{
         fontFamily:'Pangolin'

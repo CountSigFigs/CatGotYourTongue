@@ -70,7 +70,9 @@ class UserInputForm extends Component {
 const styles={
     formLabel:{
         float:'left',
-        fontFamily:'Pangolin'
+        fontFamily:'Pangolin',
+        fontWeight:'bold',
+        color:'#77AA77'
     },
     formButton:{
         backgroundColor:'#55AA56',

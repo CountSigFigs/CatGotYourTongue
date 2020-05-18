@@ -53,15 +53,15 @@ class Results extends Component {
         if (this.props.readyToFind) {
             const { error, isLoaded, wordList } = this.state;
             if (!this.props.word || !this.props.typeSearch){
-                return <div className='text-center' style={styles.list}><p>Uh oh something went wrong. Make sure you enter a word and selected a button</p></div>
+                return <div className='text-center mt-2' style={styles.error}><p>Uh oh something went wrong. Make sure you entered a word and selected a button</p></div>
             } else if (error) {
-                return <div className='text-center' style={styles.list}>Error: {error.message}</div>
+                return <div className='text-center mt-2' style={styles.error}>Error: {error.message}</div>
             } else if (!isLoaded) {
-                return <div className='text-center' style={styles.list}>Loading...</div>;
+                return <div className='text-center mt-2' style={styles.list}>Loading...</div>;
             } else if (this.state.wordList.length < 1){
-                return <div className='text-center'>No words were found. Try again.</div>
+                return <div className='text-center mt-2' style={styles.error}>No words were found. Try another word.</div>
             } else {
-                let wordSearch = this.props.typeSearch === 'syn' ? 'Synomons' : 'Antoynms'
+                let wordSearch = this.props.typeSearch === 'syn' ? 'Synonyms' : 'Antonyms'
                 return (
                     <div className='col-9 col-md-6 mx-auto text-center mt-3' style={styles.list}>
                         <p> {wordSearch} for: {this.props.word}</p>
@@ -86,7 +86,12 @@ const styles={
     list:{
         fontSize:15,
         fontFamily:'Pangolin'
-        }
+        },
+    error:{
+        fontSize:15,
+        fontFamily:'Pangolin',
+        color:'red'
+    }
 };
 
 export default Results;

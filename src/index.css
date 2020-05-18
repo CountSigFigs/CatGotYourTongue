@@ -9,10 +9,14 @@ body {
 }
 
 #toggleButton:focus{
-    background: rgb(221, 170, 4)  !important;
+    background: rgb(26, 129, 26)  !important;
+}
+
+#toggleButton:hover{
+  background-color: rgb(26, 129, 26) !important;
 }
 
 #submitButton:hover{
-  background-color: rgba(240, 185, 4, 0.945) !important;
+  background-color: rgb(26, 129, 26) !important;
 }
 
