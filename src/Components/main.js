@@ -41,7 +41,6 @@ class Main extends Component {
 }
 const containerStyle={
     backgroundColor:'whitesmoke',
-    marginTop:35,
     borderRadius:5,
     height: 595,
     width:450,
