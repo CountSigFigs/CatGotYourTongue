@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "03d4d917b89c5a448ad633dd9c00c5cc",
+    "revision": "52d9d997faee9c8ba130c9401fdfadd5",
     "url": "/CatGotYourTongue/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CatGotYourTongue/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "f663c1b6e33bdb058bef",
-    "url": "/CatGotYourTongue/static/css/main.6be29fe4.chunk.css"
+    "revision": "50837dd78dcc183317ab",
+    "url": "/CatGotYourTongue/static/css/main.c6cc98eb.chunk.css"
   },
   {
     "revision": "6c93443251d3f3ce8fcf",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CatGotYourTongue/static/js/2.6ccef24c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f663c1b6e33bdb058bef",
-    "url": "/CatGotYourTongue/static/js/main.385bf5a6.chunk.js"
+    "revision": "50837dd78dcc183317ab",
+    "url": "/CatGotYourTongue/static/js/main.c7ec85c6.chunk.js"
   },
   {
     "revision": "8eacdd8f825b586e98f9",
